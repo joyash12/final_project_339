@@ -1,0 +1,278 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(186, 177, 198);
+}
+
+.skiptomain {
+    position: fixed;
+    background-color: #e2dde3;
+    color: black;
+    border: 1px solid rgb(149, 141, 159);
+    padding: 20px 20px;
+    opacity: 0;
+}
+
+.skiptomain:focus {
+    opacity: 1;
+}
+
+/* text stuff */
+h1 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 300;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 30px;
+}
+h3 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+}
+p {
+    font-size: 20px;
+    padding: 10px 40px;
+}
+li {
+    font-size: 15px;
+    padding: 8px;
+    margin: 0px 10px;
+}
+.loose_teas p {
+    font-size: 16px;
+}
+.loose_teas {
+    background-color: rgb(186, 177, 198);
+    border-radius: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+/* navigation bars */
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+nav li {
+    font-size: 25px;
+    padding: 0px 10px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: rgb(169, 160, 180);
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu_nav {
+    background-color: none;
+    justify-content: center;
+    padding: 20px;
+}
+.menu_nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+/* .banner {
+    background-image: url("/images/cafe.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 70%;
+    opacity: 0.5;
+    height: 400px;
+    position: relative;
+}
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+    
+.banner {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.banner-bg {
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.banner-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* sections */
+.section {
+    text-align: center;
+    background-color: #e2dde3;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.section-content p {
+    line-height: 1.8;
+    font-size: 22px;
+}
+#popular {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item-card {
+    display: flex;
+    border: 5px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    width: 30%;
+    margin: 10px;
+    flex-direction: column;
+    
+
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.item-card p {
+    padding: 40px;
+}
+.item-card:hover {
+    box-shadow: 0 0 10px #3c2a53;
+}
+:focus {
+    box-shadow: 0 0 10px #2d4d36;
+}
+
+.map {
+    position: relative;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    overflow:scroll;
+}
+
+/* menu stuff */
+.drink_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e2dde3;
+    border-radius: 20px;
+    margin: 20px;
+}
+.syrup_menu {
+    background-color: #e2dde3;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.items-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;    
+    /* align-items: center; */
+    /* justify-items: end;  */
+}
+.drinks h2 {
+    text-align: center;
+}
+.drinks p {
+    text-align: center;
+}
+.syrup_drinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+/* javascript stuff */
+/* .jsstyle {
+    padding: 30px;
+    height: 300px; 
+    justify-content: center;
+    font-size: 25px;
+    line-height: 40px;
+} */
+
+
+/* .item-card:hover #front {
+    transform: rotateY(180deg);
+} */
+
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    justify-content: center;
+}
+
+.front {
+    transform: (0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    margin: auto;
+
+}
+
+.item-card.flipped {
+    flex-direction: column-reverse;
+}
+
+.item-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.item-card.flipped .back {
+    transform: rotateY(0deg);
+
+}
